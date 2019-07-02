@@ -29,6 +29,14 @@ export default {
       return this.uri + this.doi
     }
   },
+  methods:{
+    insertMarkup: function(){
+        let tag = document.createElement('script')    
+        tag.setAttribute('type',"application/ld+json")
+        tag.text = JSON.stringify(this.markup,null, 4)
+        document.head.appendChild(tag)
+    }
+  },
   mounted () {
     axios
       .get(this.url,
@@ -39,12 +47,10 @@ export default {
       } )
       .then(response => {
         this.markup = response.data
-        let tag = document.createElement('script')    
-        tag.setAttribute('type',"application/ld+json")
-        tag.text = JSON.stringify(this.markup)
-        document.head.appendChild(tag)
+        this.insertMarkup()
       })
       .catch(error => {
+        // eslint-disable-next-line
         console.log(error)
         this.errored = true
       })
