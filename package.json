@@ -1,11 +1,11 @@
 {
   "name": "dataset-schema-org-markup",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": false,
-  "homepage": "https://github.com/kjgarza/dataset-schema-org-makrup/#README.md",
+  "homepage": "https://github.com/kjgarza/dataset-schema-org-markup",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kjgarza/dataset-schema-org-makrup.git"
+    "url": "git+https://github.com/kjgarza/dataset-schema-org-markup.git"
   },
   "license": "MIT",
   "scripts": {
