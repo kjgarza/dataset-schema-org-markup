@@ -2,7 +2,9 @@ language: node_js
 node_js:
 - node
 cache: npm
-install: npm install -g @vue/cli
+install: 
+  - npm install -g @vue/cli
+  - npm install -g @vue/cli-service-global
 before_deploy: vue build --target wc 'src/components/DataciteFooter.vue'
 deploy:
   provider: npm
